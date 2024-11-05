@@ -1,1 +1,1 @@
-# open3d_lab
+# open3d lab
