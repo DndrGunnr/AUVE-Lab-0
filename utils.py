@@ -16,7 +16,7 @@ CLASS_NAME_TO_COLOR = dict(zip(CLASS_NAMES, CLASS_COLORS))
 CLASS_NAME_TO_INDEX = dict(zip(CLASS_NAMES, range(len(CLASS_NAMES))))
 
 # Path extraction
-root_path = "/home/user_name/ECN_AUVE_labs/scenario1"
+root_path = r"C:\Users\enric\Desktop\open3d_lab\scenario1"
 
 scenario = "Town01_type001_subtype0001_scenario00003"  
 
@@ -31,7 +31,7 @@ line = lines[2]
 agents =  [int(agent) for agent in line.split()[2:]]
 
 for file_path in file_list:
-    frame_list.append(file_path.split('/')[-1].split('.')[0])
+    frame_list.append(file_path.split('/')[-1].split('.')[0].split('\\')[-1])
 frame_list.sort()
 nb_frames = len(frame_list)
 
